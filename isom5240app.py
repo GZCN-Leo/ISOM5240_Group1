@@ -16,13 +16,14 @@ def age_classifier():
     age_predictions = age_classifier(image_name)
     print(age_predictions)
     age_predictions = sorted(age_predictions, key=lambda x: x['score'], reverse=True)
-   
-    st.write(age_predictions[0]['label'])
+
+    return age_predictions[0]['label']
+    
 
 def main():
     st.header("Title: Age Classification using ViT")
-    age_classifier()
-    
+    age_prediction = age_classifier()
+    st.write(age_prediction)
   
 # main part
 if __name__ == "__main__":

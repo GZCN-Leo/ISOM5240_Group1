@@ -7,7 +7,7 @@ print("Title: Age Classification using ViT")
 
 # Load the age classification pipeline
 # The code below should be placed in the main part of the program
-age_classifier = pipeline("MatanBT/age-vit-classifier",
+age_classifier = pipeline("image-classification",
                           model="akashmaggon/vit-base-age-classification")
 
 image_name = "middleagedMan.jpg"
